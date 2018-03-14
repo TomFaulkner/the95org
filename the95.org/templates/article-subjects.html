@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% from "macros/articles.html" import render_subject_nav %}
+{% block title %}Subjects{% endblock %}
+{% block body %}
+  <h1>Subjects</h1>
+  {{ render_subject_nav(active=none) }}
+{% endblock %}

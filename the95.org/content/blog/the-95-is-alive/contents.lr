@@ -1,0 +1,13 @@
+title: The 95 is alive!
+---
+author: cc
+---
+body:
+
+I started this website around a year ago, but I was never really happy with it. Today I have uploaded a new version of the site, with a new engine. The rest is a bit more technical. But, before I get to that, let me say welcome, and I hope the articles are helpful.
+
+For the last week or so I've been working on replacing it with a new responsive interface based on Bootstrap, but also a new engine under the hood. And, by engine, I mean, plain old html with no back-end. Though it took more work at the start, I believe Lektor will provide for an easier to maintain and faster site.
+---
+pub_date: 2016-11-16
+---
+twitter_handle: closetcalvin

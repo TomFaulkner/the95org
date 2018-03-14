@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% from "macros/articles.html" import render_author_name, render_article_subjects %}
+{% block title %}{{ this.name }}{% endblock %}
+{% block body %}
+  <h1>{{ this.name }}</h1>
+  by {{render_author_name(this.authors)}}
+  {% if this.date %}, {{this.date|dateformat('full')}}.{% endif %}
+  
+  <p class="text-muted">Published in {{ render_article_subjects(this.subjects) }} 
+  {% if this.posted_date %} on {{this.posted_date|dateformat('full')}}{% endif %}</p>
+  <div class="description">{{ this.description }}</div>
+  {% if this.endnotes %}
+    <div class="end_notes">End Notes: <p>{{this.endnotes}}</p></div>
+  {% endif %}
+{% endblock %}

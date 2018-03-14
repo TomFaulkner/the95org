@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% from "macros/articles.html" import render_author_nav,
+   render_article_list %}
+{% block title %}Author {{ this.name }}{% endblock %}
+{% block body %}
+  <h1>{{ this.name }}</h1>
+  <h2>Articles:</h2>
+  {{ render_article_list(this.children) }}
+  
+  {% if this.bio %}
+      <h2>Biography:</h2>
+      <div class="author-biography">
+	    {{ this.bio }}
+      </div>
+      
+	  {% if this.bio_author %}
+        <div class="biography-author"><p>Biography generously contributed by 
+		  {% if this.bio_author_twitter %}<a href="{{this.bio_author_twitter}}">{% endif %}
+		  {{this.bio_author}}
+		  {% if this.bio_author_twitter %}</a>{% endif %}
+		  {% if this.bio_author_URL %} <a href="{{this.bio_author_URL}}">[site]</a>.{% endif %}
+		  
+		  {% if this.bio_copyright %}{{this.bio_copyright}}{% endif %}
+		  </p>
+		</div>
+	  {% endif %}
+	  
+	  {% if this.bio_end_notes %}
+        <div class="biography-end-notes text-muted"><p>End Notes:{{this.bio_end_notes}}</p></div>
+	  {% endif %}
+	  
+  
+  {% endif %}
+{% endblock %}

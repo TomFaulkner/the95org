@@ -1,0 +1,5 @@
+[project]
+name = the95.org
+
+[packages]
+lektor-tags = 0.1

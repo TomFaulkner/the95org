@@ -1,0 +1,41 @@
+{% macro render_subject_nav(active=none) %}
+  <ul>
+  {% for subject in site.query('/article-subjects') %}
+    <li{% if subject._id == active %} class="active"{% endif
+      %}><a href="{{ subject|url }}">{{ subject.name }}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_article_list(articles) %}
+  <ul>
+  {% for article in articles %}
+    <li><a href="{{ article|url }}">{{ article.name }}</a> by {{ render_author_name(article.authors) }}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_author_nav(active=none) %}
+  <ul>
+  {% for author in site.query('/article-authors') %}
+    <li{% if author._id == active %} class="active"{% endif
+	  %}><a href="{{ author|url }}">{{ author.name }} </a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_author_name(name=none) %}
+  {% for author in site.query('/article-authors') %}
+	{% if author._id in name %}
+	  <a href="{{ author|url }}">{{author.name}}</a>
+	{% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{% macro render_article_subjects(subjects=none) %}
+  {% for subject in site.query('/article-subjects') %}
+	{% if subject._id in subjects %}
+	  <a href="{{ subject|url }}">{{ subject.name }}</a>
+	{% endif %}
+  {% endfor %}
+{% endmacro %}

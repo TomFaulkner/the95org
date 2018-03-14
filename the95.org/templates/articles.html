@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% from "macros/articles.html" import
+  render_article_list, render_subject_nav %}
+{% block title %}Articles{% endblock %}
+{% block body %}
+  <h2>Articles</h2>
+  {{ render_article_list(this.children) }}
+{% endblock %}

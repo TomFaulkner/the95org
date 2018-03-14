@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% from "macros/articles.html" import render_author_nav %}
+{% block title %}Authors{% endblock %}
+{% block body %}
+  <h1>Authors</h1>
+  {{ render_author_nav(active=none) }}
+{% endblock %}

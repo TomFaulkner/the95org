@@ -1,0 +1,89 @@
+.blog-masthead {
+  margin-bottom: 3rem;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.navbar-brand {
+  color: #cdddeb !important;
+	
+}
+
+.nav-link {
+  position: relative;
+  padding: 1rem;
+  font-weight: 500;
+  color: #cdddeb !important;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Active state gets a caret at the bottom */
+.nav-item.active {
+  color: #fff;
+}
+.nav-item.active:after {
+  position: absolute;
+  bottom: 0;
+  # left: 3%;
+  width: 0;
+  height: 0;
+  # margin-left: -.3rem;
+  margin-left: 2.0rem;
+  vertical-align: middle;
+  content: "";
+  border-right: .3rem solid transparent;
+  border-bottom: .3rem solid;
+  border-left: .3rem solid transparent;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.author-biography {
+	
+}
+
+.author-biography h1{
+	font-size: 120%;
+}
+.author-biography h2{
+	font-size: 115%;
+}
+
+blockquote {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.discussion-speaker {font-weight: bold;}
+.discussion-mainspeaker {color: #428bca;}
+.discussion-speaker2 {color: green;}
+.discussion-speaker3 {color: red;}
+.discussion-speaker4 {color: gray}
+.discussion-speaker5 {color: olive}
+.discussion-speaker6 {color: lime}
+.discussion-speaker7 {color: teal}
+.discussion-speaker8 {color: navy}
+.discussion-speaker9 {color: purple}
+
+.catechism-question {}
+.catechism-answer {color: #428bca;}
